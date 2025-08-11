@@ -1,0 +1,92 @@
+.sidebar {
+  width: 100%;
+  flex-shrink: 0;
+  
+  @media (min-width: 1024px) {
+    width: 16rem;
+  }
+  
+  .sidebarCard {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1), 0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+    border: 1px solid hsl(214.3, 31.8%, 91.4%);
+    padding: 1.5rem;
+    
+    .title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: hsl(222.2, 84%, 4.9%);
+      margin-bottom: 1rem;
+    }
+    
+    .filterGroup {
+      margin-bottom: 1.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: hsl(215.3, 25%, 26.7%);
+        margin-bottom: 0.5rem;
+      }
+      
+      .select {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid hsl(214.3, 31.8%, 91.4%);
+        border-radius: 0.375rem;
+        box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.05);
+        font-size: 0.875rem;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(222.2, 84%, 4.9%);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        
+        &:focus {
+          outline: none;
+          border-color: hsl(221.2, 83.2%, 53.3%);
+          box-shadow: 0 0 0 1px hsla(221.2, 83.2%, 53.3%, 0.5);
+        }
+      }
+      
+      .searchContainer {
+        position: relative;
+        
+        .searchInput {
+          width: 100%;
+          padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+          border: 1px solid hsl(214.3, 31.8%, 91.4%);
+          border-radius: 0.375rem;
+          box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.05);
+          font-size: 0.875rem;
+          background-color: hsl(0, 0%, 100%);
+          color: hsl(222.2, 84%, 4.9%);
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+          
+          &:focus {
+            outline: none;
+            border-color: hsl(221.2, 83.2%, 53.3%);
+            box-shadow: 0 0 0 1px hsla(221.2, 83.2%, 53.3%, 0.5);
+          }
+          
+          &::placeholder {
+            color: hsl(215.4, 16.3%, 46.9%);
+          }
+        }
+        
+        .searchIcon {
+          position: absolute;
+          left: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: hsl(215.4, 16.3%, 46.9%);
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
